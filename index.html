@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복소수와 양자컴퓨터의 연관성</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="bg-binary"></div>
+
+    <div class="container">
+        <!-- 헤더 -->
+        <header>
+            <h1>복소수와 양자컴퓨터의 연관성</h1>
+            <p class="subtitle">Complex Numbers in Quantum Computing</p>
+        </header>
+
+        <!-- 메인 인포그래픽 -->
+        <div class="infographic">
+            <!-- 복소수 섹션 -->
+            <div class="section-card complex">
+                <h2>
+                    <div class="icon">ℂ</div>
+                    복소수란?
+                </h2>
+                <p>복소수는 실수와 허수로 이루어진 수입니다.</p>
+                
+                <div style="background: rgba(124, 58, 237, 0.1); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p style="color: #cbd5e1; margin: 10px 0;">
+                        <span class="highlight">복소수의 형태:</span> z = a + bi
+                    </p>
+                    <p style="color: #a0aec0; font-size: 0.95em; margin: 10px 0;">
+                        · a는 실수부<br/>
+                        · b는 허수부 (i² = -1)<br/>
+                        · 예: 3 + 2i, -1 + 4i
+                    </p>
+                </div>
+                
+                <ul>
+                    <li><span class="highlight">복소수는 2가지 정보를 담아요:</span></li>
+                    <li>① <span class="highlight\">크기</span>: √(a² + b²)</li>
+                    <li>② <span class="highlight\">방향</span>: 위상(각도)</li>
+                    <li><span class="highlight\">왜 필요한가?</span> 양자 상태를 나타낼 때 확률의 크기와 위상 둘 다 필요하니까요!</li>
+                </ul>
+            </div>
+
+            <!-- 비트 vs 큐비트 비교 -->
+            <div class="section-card quantum">
+                <h2>
+                    <div class="icon">⚛</div>
+                    비트 vs 큐비트
+                </h2>
+                <p>기존 컴퓨터와 양자컴퓨터의 가장 큰 차이</p>
+                
+                <!-- 비교 다이어그램 -->
+                <div class="comparison-grid">
+                    <div class="comp-box">
+                        <div class="comp-title">일반 컴퓨터 (비트)</div>
+                        <div class="bit-visual">
+                            <div class="bit-state on">1</div>
+                            <div class="bit-or">또는</div>
+                            <div class="bit-state off">0</div>
+                        </div>
+                        <p style="margin-top: 15px; color: #a0aec0; font-size: 0.9em;">
+                            지금 이 순간 둘 중<br/><span class="highlight\">정확히 하나!</span><br/><br/>
+                            <span style="color: #7c3aed;\">예: 전등 ON/OFF</span>
+                        </p>
+                    </div>
+                    
+                    <div class="vs-arrow">⟷</div>
+                    
+                    <div class="comp-box">
+                        <div class="comp-title\">양자컴퓨터 (큐비트)</div>
+                        <div class="qubit-visual">
+                            <div class="qubit-state\">0 AND 1</div>
+                            <div class="superposition-indicator">동시에 존재!</div>
+                        </div>
+                        <p style="margin-top: 15px; color: #a0aec0; font-size: 0.9em;">
+                            <span class=\"highlight\">0과 1을</span><br/><span class=\"highlight\">동시에!</span><br/><br/>
+                            <span style=\"color: #7c3aed;\">복소수로 표현</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 연관성 섹션 (풀사이즈) -->
+            <div class="connection-section">
+                <h2>🔗 중첩 상태란?</h2>
+                <div class="superposition-container">
+                    <div class="supp-text">
+                        <p style="font-size: 1.05em; margin-bottom: 15px;">
+                            <span class="highlight">🎲 쉬운 비유로 이해하기</span>
+                        </p>
+                        <p style="color: #cbd5e1; margin: 10px 0; line-height: 1.8;">
+                            <strong>일반 동전:</strong> 떨어질 때 이미 결정됨 (앞면 또는 뒷면)
+                        </p>
+                        <p style="color: #cbd5e1; margin: 10px 0; line-height: 1.8;">
+                            <strong>양자 동전:</strong> 떨어지는 도중에는 앞면과 뒷면이 「동시에」 존재<br/>
+                            손으로 잡는 순간(= 측정) 앞면 또는 뒷면으로 결정됨
+                        </p>
+                        <div style="background: rgba(0, 212, 255, 0.1); padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 3px solid #00d4ff;">
+                            <p style=\"color: #cbd5e1; margin: 5px 0;\">
+                                <span class="highlight\">→ 측정 전:</span> 0과 1이 함께 존재 (중첩)
+                            </p>
+                            <p style=\"color: #cbd5e1; margin: 5px 0;\">
+                                <span class="highlight\">→ 측정 후:</span> 0 또는 1로 확정
+                            </p>
+                            <p style=\"color: #cbd5e1; margin: 5px 0;\">
+                                <span class="highlight\">→ 각 확률:</span> 복소수로 표현
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 간섭 현상 섹션 (풀사이즈) -->
+        <div class="interference-section">
+            <h2>🌊 간섭 현상</h2>
+            <div class="interference-container">
+                <!-- 설명 -->
+                <div class="interference-text">
+                    <p style="font-size: 1.05em; margin-bottom: 15px;">
+                        <span class="highlight">물결의 간섭처럼...</span>
+                    </p>
+                    <p style="color: #cbd5e1; margin: 15px 0; line-height: 1.8;">
+                        <strong>연못에 돌을 던지면:</strong> 파동이 퍼집니다.
+                    </p>
+                    <p style="color: #cbd5e1; margin: 15px 0; line-height: 1.8;">
+                        • 두 파동이 같은 방향 → <span style="color: #00ff00; font-weight: bold;">더 커짐 (건설적 간섭)</span><br/>
+                        • 두 파동이 반대 방향 → <span style="color: #ff4444; font-weight: bold;">서로 상쇄 (상쇄적 간섭)</span>
+                    </p>
+                    
+                    <div style="background: rgba(251, 191, 36, 0.1); padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 3px solid #fbbf24;">
+                        <p style=\"color: #cbd5e1; margin: 10px 0; line-height: 1.8;\">
+                            <span class="highlight\">양자컴퓨터는 이 원리를 이용합니다:</span>
+                        </p>
+                        <p style=\"color: #a0aec0; margin: 10px 0;\">
+                            ✓ 정답의 확률은 더 크게 (건설적 간섭)<br/>
+                            ✓ 오답의 확률은 작게 (상쇄적 간섭)<br/>
+                            ✓ 복소수의 위상(방향)이 간섭을 조절합니다!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3열 상세 섹션 -->
+        <div class="three-column">
+            <!-- 복소수의 역할 -->
+            <div class="section-card wave">
+                <h2>
+                    <div class="icon">🔢</div>
+                    복소수가 하는 일
+                </h2>
+                <p>양자세계를 표현하는 도구</p>
+                
+                <div style="background: rgba(0, 212, 255, 0.1); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p style="color: #cbd5e1; margin: 10px 0;">
+                        <span class="highlight\">크기 (절댓값)</span><br/>
+                        = 0이 나올 확률, 1이 나올 확률
+                    </p>
+                </div>
+                
+                <div style="background: rgba(251, 191, 36, 0.1); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p style="color: #cbd5e1; margin: 10px 0;">
+                        <span class="highlight\">위상 (방향)</span><br/>
+                        = 간섭을 조절하는 정보
+                    </p>
+                </div>
+                
+                <p style="color: #a0aec0; font-size: 0.9em; margin-top: 15px;\">
+                    ✓ 간단한 숫자로는 이 두 정보를 함께 담을 수 없어요!<br/>
+                    ✓ 복소수만이 가능합니다!
+                </p>
+            </div>
+
+            <!-- 중첩의 장점 -->
+            <div class="section-card gates">
+                <h2>
+                    <div class="icon">⚡</div>
+                    양자컴퓨터의 강점
+                </h2>
+                <p>왜 양자컴퓨터가 빠를까?</p>
+                
+                <div style="background: rgba(124, 58, 237, 0.1); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <p style="color: #cbd5e1; margin: 10px 0; line-height: 1.8;">
+                        <strong>2큐비트:</strong> 동시에 4가지 상태<br/>
+                        (2 × 2 = 4)
+                    </p>
+                    <p style="color: #cbd5e1; margin: 10px 0; line-height: 1.8;">
+                        <strong>3큐비트:</strong> 동시에 8가지 상태<br/>
+                        (2 × 2 × 2 = 8)
+                    </p>
+                    <p style="color: #cbd5e1; margin: 10px 0; line-height: 1.8;">
+                        <strong>300큐비트:</strong> 동시에 2³⁰⁰가지!<br/>
+                        (일반컴퓨터로는 불가능)
+                    </p>
+                </div>
+            </div>
+
+            <!-- 복소수와 양자컴퓨터 -->
+            <div class="section-card application">
+                <h2>
+                    <div class="icon">🔗</div>
+                    핵심: 왜 복소수?
+                </h2>
+                <p>둘이 함께 작동하는 이유</p>
+                
+                <div style="background: rgba(0, 212, 255, 0.1); padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #00d4ff;">
+                    <p style="color: #cbd5e1; margin: 10px 0; line-height: 1.8;">
+                        <span class="highlight\">1단계:</span><br/>
+                        복소수로 양자 상태 표현
+                    </p>
+                    <p style="color: #cbd5e1; margin: 10px 0; line-height: 1.8;">
+                        <span class="highlight\">2단계:</span><br/>
+                        복소수의 위상으로 간섭 조절
+                    </p>
+                    <p style="color: #cbd5e1; margin: 10px 0; line-height: 1.8;">
+                        <span class="highlight\">3단계:</span><br/>
+                        측정으로 답 얻기
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="summary-section">
+            <h2>🎯 핵심 정리</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <h3>복소수</h3>
+                    <p><strong>형태:</strong> a + bi</p>
+                    <p><strong>특징:</strong> 크기 + 방향</p>
+                    <p><strong>용도:</strong> 양자 상태 표현</p>
+                </div>
+                <div class="summary-item">
+                    <h3>중첩</h3>
+                    <p><strong>의미:</strong> 0과 1 동시 존재</p>
+                    <p><strong>특징:</strong> 측정 전까지만</p>
+                    <p><strong>강점:</strong> 병렬 처리</p>
+                </div>
+                <div class="summary-item">
+                    <h3>간섭</h3>
+                    <p><strong>원리:</strong> 파동의 합성</p>
+                    <p><strong>역할:</strong> 확률 조절</p>
+                    <p><strong>도구:</strong> 복소수 위상</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>복소수는 양자컴퓨터의 "언어"입니다</p>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #7c3aed;">
+                결론: 복소수의 크기와 위상이, 양자 상태의 중첩과 간섭을 완벽하게 표현합니다!
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
